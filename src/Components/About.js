@@ -110,7 +110,7 @@ const About = () => {
 
           {/* Gráfico 4: Informações de Saúde */}
           <div className="chart-item">
-            <h3>Busca por Informações de Saúde</h3>
+            <h3>Estatísticas de Saúde</h3>
             <div className="health-stats">
               <div className="health-item">
                 <div className="health-progress">

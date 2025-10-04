@@ -117,56 +117,285 @@ nav {
 .secondary-button:hover {
   background-color: #e48f0f;
 }
-.about-section-container {
-  margin-top: 20rem;
+
+
+/* Estilos para os Gráficos - ADICIONAR APÓS OS ESTILOS EXISTENTES */
+.stats-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.chart-item {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid #4CAF50;
+}
+
+.chart-item h3 {
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+/* Gráficos de Barras */
+.chart-bar-container {
+  margin-bottom: 1rem;
+}
+
+.chart-bar {
+  width: 100%;
+  height: 40px;
+  background: #e0e0e0;
+  border-radius: 20px;
+  overflow: hidden;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
-.about-background-image-container {
+
+.chart-fill {
+  height: 100%;
+  border-radius: 20px;
+  transition: width 1s ease-in-out;
+  position: relative;
+  animation: fillAnimation 1.5s ease-out;
+}
+
+@keyframes fillAnimation {
+  from { width: 0% !important; }
+}
+
+.chart-label {
   position: absolute;
-  left: -150px;
-  z-index: -2;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  font-weight: bold;
+  font-size: 0.9rem;
 }
-.about-section-image-container {
-  flex: 0.9;
-  margin-right: 1rem;
+
+.chart-legend {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 0.5rem;
 }
-.about-section-text-container {
-  flex: 1;
-  justify-content: center;
+
+.chart-description {
+  font-style: italic;
+  color: #888;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Grid de Dispositivos */
+.devices-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  text-align: center;
+}
+
+.device-item {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-.primary-subheading {
-  font-weight: 700;
-  color: #fe9e0d;
-  font-size: 1.15rem;
+
+.device-chart {
+  width: 60px;
+  height: 120px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
 }
-.about-buttons-container {
-  margin-top: 2rem;
-  display: flex;
+
+.device-fill {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, #4CAF50, #8BC34A);
+  border-radius: 10px;
+  animation: growUp 1.5s ease-out;
 }
-.watch-video-button {
-  margin-left: 2rem;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  border-radius: 5rem;
+
+@keyframes growUp {
+  from { height: 0% !important; }
+}
+
+.device-percent {
+  font-weight: bold;
   font-size: 1.1rem;
-  cursor: pointer;
-  font-weight: 600;
-  color: #484848;
-  transition: 0.2s;
+  margin: 0.5rem 0 0.2rem;
+  color: #333;
+}
+
+.device-name {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Lista de Plataformas */
+.platforms-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.platform-item {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 1rem;
 }
-.watch-video-button svg {
-  font-size: 3rem;
-  margin-right: 1rem;
+
+.platform-name {
+  min-width: 80px;
+  font-weight: 500;
 }
+
+.platform-bar {
+  flex: 1;
+  height: 25px;
+  background: #e0e0e0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.platform-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #FF6B6B, #FF8E53);
+  border-radius: 12px;
+  animation: fillAnimation 1.5s ease-out;
+}
+
+.platform-percent {
+  min-width: 40px;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Estatísticas de Saúde */
+.health-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.health-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.health-progress {
+  flex: 1;
+  height: 20px;
+  background: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.health-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2196F3, #21CBF3);
+  border-radius: 10px;
+  animation: fillAnimation 1.5s ease-out;
+}
+
+.health-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 150px;
+}
+
+.health-percent {
+  font-weight: bold;
+  color: #2196F3;
+}
+
+.health-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Destaques */
+.highlights-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.highlight-item {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+}
+
+.highlight-item h4 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.highlight-item p {
+  font-size: 0.9rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .devices-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .health-info {
+    min-width: 120px;
+  }
+  
+  .platform-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .platform-bar {
+    width: 100%;
+  }
+  
+  .chart-item {
+    padding: 1rem;
+  }
+  
+  .chart-bar {
+    height: 35px;
+  }
+}
+
+/* Estilos para hover effects nos gráficos (opcional) */
+.chart-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.device-item:hover .device-fill {
+  background: linear-gradient(to top, #45a049, #7cb342);
+}
+
+.platform-item:hover .platform-fill {
+  background: linear-gradient(90deg, #ff5252, #ff7b47);
+}
+
+.health-item:hover .health-fill {
+  background: linear-gradient(90deg, #1976D2, #00BCD4);
+}
+
 .contact-page-wrapper h1 {
   max-width: 900px !important;
 }
@@ -230,81 +459,382 @@ nav {
   color: #4c4c4c;
   cursor: pointer;
 }
-.testimonial-section-bottom {
-  margin-top: 2rem;
-  background-color: white;
-  padding: 1.5rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 750px;
-  border-radius: 2rem;
-  flex-direction: column;
+/* Seção de Atividades por Idade */
+.age-activities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.age-group-card {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
   text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
 }
-.testimonial-section-bottom {
-  margin: 2rem auto;
+
+.age-group-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--card-color), transparent);
 }
-.testimonial-section-bottom p {
+
+.age-group-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.age-card-header {
+  margin-bottom: 1rem;
+}
+
+.age-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.age-group-card h3 {
+  color: #333;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
   font-weight: 700;
-  color: #515151;
-  max-width: 500px;
-  font-size: 1.1rem;
-  margin: 2rem 0rem;
 }
-.testimonials-stars-container svg {
-  margin: 0rem 0.25rem;
-  font-size: 1.5rem;
-  color: #fe9e0d;
+
+.age-description {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.5;
+  font-weight: 500;
 }
-.testimonial-section-bottom h2 {
+
+.activities-list {
+  text-align: left;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+}
+
+.activities-list h4 {
+  color: #333;
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.activities-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activities-list li {
+  padding: 0.4rem 0;
+  color: #555;
+  font-size: 0.9rem;
+  position: relative;
+  padding-left: 1.2rem;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.activities-list li:last-child {
+  border-bottom: none;
+}
+
+.activities-list li:before {
+  content: "•";
+  color: #4CAF50;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.card-footer {
   margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e9ecef;
 }
-.work-section-wrapper {
-  margin-top: 15rem;
+
+.development-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
-.work-section-top p {
-  text-align: center;
-  max-width: 600px !important;
+
+/* Efeitos de hover específicos por card */
+.age-group-card:nth-child(1):hover {
+  border-top-color: #FF6B6B;
+  box-shadow: 0 15px 35px rgba(255, 107, 107, 0.2);
 }
-.work-section-top h1 {
-  max-width: 700px !important;
+
+.age-group-card:nth-child(2):hover {
+  border-top-color: #4ECDC4;
+  box-shadow: 0 15px 35px rgba(78, 205, 196, 0.2);
 }
-.work-section-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+
+.age-group-card:nth-child(3):hover {
+  border-top-color: #45B7D1;
+  box-shadow: 0 15px 35px rgba(69, 183, 209, 0.2);
 }
-.work-section-info {
-  width: 290px;
-  min-height: 350px;
-  background-color: white;
-  padding: 1rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border-radius: 1rem;
-  color: #505050;
-  margin: 1rem 2rem;
+
+.age-group-card:nth-child(4):hover {
+  border-top-color: #96CEB4;
+  box-shadow: 0 15px 35px rgba(150, 206, 180, 0.2);
 }
-.work-section-info h2 {
-  margin: 1rem 0rem;
+
+/* Animações */
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
+
+.age-group-card {
+  animation: cardEntrance 0.6s ease-out;
+}
+
+.age-group-card:nth-child(1) { animation-delay: 0.1s; }
+.age-group-card:nth-child(2) { animation-delay: 0.2s; }
+.age-group-card:nth-child(3) { animation-delay: 0.3s; }
+.age-group-card:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .age-activities-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 0.5rem;
+  }
+  
+  .age-group-card {
+    padding: 1.5rem 1rem;
+  }
+  
+  .age-icon {
+    font-size: 2.5rem;
+  }
+  
+  .age-group-card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .age-activities-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .activities-list {
+    padding: 0.8rem;
+  }
+  
+  .activities-list li {
+    font-size: 0.85rem;
+  }
+  
+  .development-tag {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+/* Estilos para a seção da ONG */
 .work-section-bottom {
-  margin-top: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.work-section-info {
+  max-width: 500px;
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  border: 2px solid #f0f0f0;
+}
+
+.info-boxes-img-container {
+  margin-bottom: 1.5rem;
+  background-color: #585858;
+}
+
+.info-boxes-img-container img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 3px solid #4CAF50;
+  padding: 10px;
+}
+
+.work-section-info h2 {
+  color: #2c5530;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.work-section-info p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Lista de características */
+.program-features {
+  text-align: left;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #4CAF50;
+}
+
+.program-features h4 {
+  color: #333;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.program-features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.program-features li {
+  padding: 0.5rem 0;
+  color: #555;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.program-features li:before {
+  content: "✓";
+  color: #4CAF50;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Estatísticas de impacto */
+.impact-stats {
+  margin: 2rem 0;
+}
+
+.impact-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, #4CAF50, #45a049);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.impact-number {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.impact-text {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* Botões de ação */
+.program-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
   flex-wrap: wrap;
 }
-.work-section-info p {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  font-weight: 600;
+
+.secondary-button.outline {
+  background: transparent;
+  border: 2px solid #4CAF50;
+  color: #4CAF50;
+}
+
+.secondary-button.outline:hover {
+  background: #4CAF50;
+  color: white;
+}
+
+/* Efeitos hover */
+.work-section-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .work-section-info {
+    margin: 0 1rem;
+    padding: 1.5rem;
+  }
+  
+  .program-actions {
+    flex-direction: column;
+  }
+  
+  .program-actions button {
+    width: 100%;
+  }
+  
+  .impact-badge {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .impact-number {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animação de entrada */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.work-section-info {
+  animation: fadeInUp 0.8s ease-out;
 }
 
 @media (max-width: 1000px) {
@@ -322,6 +852,9 @@ nav {
 @media (max-width: 800px) {
   .nav-logo-container {
     max-width: 140px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
   }
   .navbar-links-container {
     display: none;

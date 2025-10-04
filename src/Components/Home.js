@@ -1,6 +1,6 @@
 import React from "react";
 import BannerBackground from "../Assets/home-banner-background.png";
-import BannerImage from "../Assets/home-banner-image.png";
+import BannerImage from "../Assets/home-banner-image.png"; // Podemos trocar por uma imagem de crianças aprendendo
 import Navbar from "./Navbar";
 import { FiArrowRight } from "react-icons/fi";
 
@@ -14,18 +14,18 @@ const Home = () => {
         </div>
         <div className="home-text-section">
           <h1 className="primary-heading">
-            Your Favourite Food Delivered Hot & Fresh
+            Além da Tela: Educação que Transforma
           </h1>
           <p className="primary-text">
-            Healthy switcher chefs do all the prep work, like peeding, chopping
-            & marinating, so you can cook a fresh food.
+            Conectando crianças a oportunidades educacionais e atividades 
+            que desenvolvem habilidades cognitivas e motoras de forma divertida e interativa.
           </p>
-          <button className="secondary-button">
-            Order Now <FiArrowRight />{" "}
-          </button>
+          {/* <button className="secondary-button">
+            Explorar Conteúdo <FiArrowRight /> 
+          </button> */}
         </div>
         <div className="home-image-section">
-          <img src={BannerImage} alt="" />
+          <img src={BannerImage} alt="Crianças aprendendo" />
         </div>
       </div>
     </div>

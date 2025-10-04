@@ -85,12 +85,18 @@ nav {
 }
 .primary-heading {
   font-size: clamp(2rem, 5vw, 4rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #4c4c4c;
   /* line-height: 5rem; */
   max-width: 600px;
 }
 .primary-text {
   font-size: clamp(1rem, 3vw, 1.5rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   max-width: 500px;
   color: #6a6a6a;
   margin: 1.5rem 0rem;
@@ -881,11 +887,16 @@ nav {
   }
   .primary-heading {
     text-align: center;
-    max-width: 90%;
+    display: flex;
+  justify-content: center;
+  align-items: center;
   }
   .primary-text {
+    display: flex;
+  justify-content: center;
+  align-items: center;
     text-align: center;
-    max-width: 80%;
+
   }
   .home-text-section,
   .about-section-text-container {
@@ -968,4 +979,145 @@ nav {
   text-align: center;     
   margin-top: 5rem;
   padding: 2rem;
+}
+
+/* Seção de Impactos da Tecnologia */
+.tech-impact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 3rem;
+  padding: 0 1rem;
+}
+
+.impact-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border-top: 5px solid transparent;
+}
+
+.negative-impact {
+  border-top-color: #ff6b6b;
+}
+
+.positive-impact {
+  border-top-color: #4CAF50;
+}
+
+.impact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.impact-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.impact-icon {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+
+.impact-header h2 {
+  color: #333;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.impact-content {
+  color: #555;
+  line-height: 1.7;
+}
+
+.impact-content p {
+  margin-bottom: 1.2rem;
+  text-align: justify;
+}
+
+.impact-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Destaques específicos para cada card */
+.negative-impact .impact-content {
+  border-left: 3px solid #ff6b6b;
+  padding-left: 1rem;
+}
+
+.positive-impact .impact-content {
+  border-left: 3px solid #4CAF50;
+  padding-left: 1rem;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .tech-impact-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .impact-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-impact-container {
+    padding: 0 0.5rem;
+  }
+  
+  .impact-card {
+    padding: 1.2rem;
+  }
+  
+  .impact-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .impact-icon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  
+  .impact-header h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Animações */
+@keyframes cardSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.negative-impact {
+  animation: cardSlideIn 0.6s ease-out;
+}
+
+.positive-impact {
+  animation: cardSlideIn 0.6s ease-out 0.2s both;
+}
+
+/* Melhorias de legibilidade */
+.impact-content {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.impact-content p {
+  margin-bottom: 1.5rem;
 }

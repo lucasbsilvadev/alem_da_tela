@@ -17,8 +17,7 @@ const Home = () => {
             Além da Tela: Educação que Transforma
           </h1>
           <p className="primary-text">
-            Conectando crianças a oportunidades educacionais e atividades 
-            que desenvolvem habilidades cognitivas e motoras de forma divertida e interativa.
+           Promovendo a conexão dos jovens com práticas educativas e atividades que estimulam o desenvolvimento cognitivo e motor, reconhecendo a infância como uma etapa fundamental que deve ser vivida e protegida com os devidos cuidados.
           </p>
           {/* <button className="secondary-button">
             Explorar Conteúdo <FiArrowRight /> 

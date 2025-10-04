@@ -6,12 +6,12 @@ const Work = () => {
     {
       image: DoeLogo,
       title: "DOE | Ficar de Bem",
-      text: "Organização que promove inclusão digital e educação tecnológica para crianças em situação de vulnerabilidade.",
+      text: "A ONG Ficar de Bem tem como objetivo promover a proteção a crianças e adolescentes em situações de vulnerabilidade. Dessa forma, Lutando por uma sociedade mais justa na qual os mais jovens sejam prioridade.",
       features: [
-        "Oficinas de programação para crianças",
-        "Doação de equipamentos tecnológicos",
-        "Aulas de robótica educativa",
-        "Suporte psicopedagógico digital"
+        "Acolhimento de vítimas de violência",
+        "Apadrinhamento afetivo (Projeto Fênix)",
+        "Prevenção e proteção social",
+        "Central de doações"
       ],
       impact: "Mais de 2.000 crianças impactadas em 2023",
       website: "https://doe.ficardebem.org.br/?utm_source=Google_ADG&utm_medium=%7Badgroupid%7D&utm_campaign=%7Bcampaignid%7D&utm_content=%7Bkeyword%7D&gad_source=1&gad_campaignid=18208111590&gbraid=0AAAAADLJ6VWFG7FsYLacY3rvmG-QWvdy5&gclid=CjwKCAjwisnGBhAXEiwA0zEOR-obWiRj8juS29Vzc2ar1RVjoq9LsjEC-tytaKB35nXedNbKgEK4khoCfuMQAvD_BwE"

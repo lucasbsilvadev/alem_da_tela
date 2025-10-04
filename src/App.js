@@ -21,8 +21,12 @@ function App() {
       <div id="testimonial">
         <Testimonial />
       </div>
+      <div id="contact">
+        <Contact />
+      </div>
 
       <Footer />
+
     </div>
   );
 }

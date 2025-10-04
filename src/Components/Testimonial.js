@@ -36,7 +36,7 @@ const Testimonial = () => {
     <div className="work-section-wrapper" id="testimonial">
       <div className="work-section-top">
         <p className="primary-subheading">Atividades Educativas</p>
-        <h1 className="primary-heading">Sugestões por Faixa Etária</h1>
+        <h1 className="primary-heading">Sugestões por Faixa Etária </h1>
         <p className="primary-text">
           Atividades educativas selecionadas para estimular o desenvolvimento 
           cognitivo e motor em cada fase do crescimento.

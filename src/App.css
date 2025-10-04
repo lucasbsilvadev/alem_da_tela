@@ -920,7 +920,7 @@ nav {
     margin-right: 0rem !important;
   }
   .work-section-wrapper {
-    margin-top: 5rem !important;
+    margin-top: 2rem; 
   }
   .work-section-bottom {
     margin-top: 1rem !important;
@@ -958,4 +958,14 @@ nav {
   .about-background-image-container {
     display: none;
   }
+}
+
+.work-section-wrapper, #testimonial {
+  display: flex;
+  justify-content: center; 
+  align-items: center;     
+  flex-direction: column;  
+  text-align: center;     
+  margin-top: 5rem;
+  padding: 2rem;
 }
